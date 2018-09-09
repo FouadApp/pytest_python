@@ -2,9 +2,11 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            steps {
-                sh 'pytest add.py'
+            
+            withEnv((["GOPATH=/usr","PATH=/usr/bin/:${env.PATH}"])){
+             sh 'pytest add.py'
             }
+       
         }
     }
 }
