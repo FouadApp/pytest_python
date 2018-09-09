@@ -1,0 +1,13 @@
+name: envr pytest
+
+dependencies:
+  - python==3.4
+  - pytest
+  - toolz
+  - matplotlib
+  - dill
+  - pandas
+  - partd
+  - pip:
+    - pytest
+    - pyspark
