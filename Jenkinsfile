@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                 withEnv(["GOPATH=/usr","PATH=/usr/bin/:${env.PATH}"]){
+                 withEnv(["GOPATH=/usr","PATH=/usr/bin/pytest:${env.PATH}"]){
                   sh 'pytest add.py'
                  }
             }
